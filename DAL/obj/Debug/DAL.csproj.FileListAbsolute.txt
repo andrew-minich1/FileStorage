@@ -1,0 +1,16 @@
+D:\Projects\FileStorage\DAL\bin\Debug\DAL.dll.config
+D:\Projects\FileStorage\DAL\bin\Debug\DAL.dll
+D:\Projects\FileStorage\DAL\bin\Debug\DAL.pdb
+D:\Projects\FileStorage\DAL\bin\Debug\DAL_Interface.dll
+D:\Projects\FileStorage\DAL\bin\Debug\EntityFramework.dll
+D:\Projects\FileStorage\DAL\bin\Debug\EntityFramework.SqlServer.dll
+D:\Projects\FileStorage\DAL\bin\Debug\Helpers.dll
+D:\Projects\FileStorage\DAL\bin\Debug\ORM.dll
+D:\Projects\FileStorage\DAL\bin\Debug\DAL_Interface.pdb
+D:\Projects\FileStorage\DAL\bin\Debug\Helpers.pdb
+D:\Projects\FileStorage\DAL\bin\Debug\ORM.pdb
+D:\Projects\FileStorage\DAL\bin\Debug\EntityFramework.xml
+D:\Projects\FileStorage\DAL\bin\Debug\EntityFramework.SqlServer.xml
+D:\Projects\FileStorage\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+D:\Projects\FileStorage\DAL\obj\Debug\DAL.dll
+D:\Projects\FileStorage\DAL\obj\Debug\DAL.pdb

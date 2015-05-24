@@ -1,0 +1,28 @@
+﻿<table class="table table-bordered table-hover table-condensed">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Email </th>
+            <th>Date</th>
+            @*<th>Make admin</th>*@
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var user in ViewBag.Users)
+        {
+            <tr>
+                <td>
+                    @Ajax.ActionLink((string)user.Login, "ShowUserFiles", "Home", new { id = user.Id }, new AjaxOptions
+                {
+                    HttpMethod = "GET",
+                    InsertionMode = InsertionMode.Replace,
+                    UpdateTargetId = "main"
+                })
+                </td>
+                <td>@user.Email</td>
+                <td>@user.CreationDate</td>
+                @*<td>@Html.CheckBox("IsOpen", (bool)user.IsOpen, new { @name = "IsOpen", @class = user.Id })</td>*@
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,62 @@
+﻿@model FileStorage.Models.FilesViewModel
+
+
+<div id="content">
+    <ul id="tabs" class="nav nav-tabs nav-justified" data-tabs="tabs">
+
+        <li class="active">
+            <a data-toggle="tab" href="#user">
+                <span class="glyphicon glyphicon-user"></span>
+            </a>
+        </li>
+
+        @if (User.Identity.IsAuthenticated)
+        {
+            <li>
+                <a data-toggle="tab" href="#trash">
+                    <span class="glyphicon glyphicon-trash"></span>
+                </a>
+            </li>
+
+            <li>
+                <a data-toggle="tab" href="#storage">
+                    <span class="glyphicon glyphicon-cloud-download"></span>
+                </a>
+            </li>
+
+        }
+
+    </ul>
+
+    <div id="my-tab-content" class="tab-content">
+
+        <div class="tab-pane active" id="user">
+            @if (!HttpContext.Current.User.Identity.IsAuthenticated)
+            {
+                @Html.Partial("_Login");
+            }
+            else
+            {
+                @Html.Partial("_Logout");
+            }
+        </div>
+        @if (HttpContext.Current.User.Identity.IsAuthenticated)
+        {
+            <div class="tab-pane" id="trash">
+
+
+                @Html.Partial("_Box")
+
+            </div>
+
+            <div class="tab-pane" id="storage">
+                <div class="well">
+                    <strong>Total Files = </strong> @Model.CountFiles
+                </div>
+                <div class="well">
+                    <strong>Total Size =  </strong>  @Model.TotalSize / 10000
+                </div>
+            </div>
+        }
+    </div>
+</div>

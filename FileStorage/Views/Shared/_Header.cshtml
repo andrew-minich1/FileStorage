@@ -1,0 +1,22 @@
+﻿<nav class="header navbar navbar-default navbar-inverse" role="navigation">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="/Home/Index">
+                <img src="~/Content/Images/FileStorage_Logo.png" />
+            </a>
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+            @Html.Partial("_LoginMenu")
+
+            @Html.Partial("_UserSearchForm")
+
+        </div>
+    </div>
+</nav>

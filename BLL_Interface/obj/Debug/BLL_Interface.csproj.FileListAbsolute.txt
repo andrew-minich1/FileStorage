@@ -1,0 +1,4 @@
+D:\Projects\FileStorage\BLL_Interface\bin\Debug\BLL_Interface.dll
+D:\Projects\FileStorage\BLL_Interface\bin\Debug\BLL_Interface.pdb
+D:\Projects\FileStorage\BLL_Interface\obj\Debug\BLL_Interface.dll
+D:\Projects\FileStorage\BLL_Interface\obj\Debug\BLL_Interface.pdb

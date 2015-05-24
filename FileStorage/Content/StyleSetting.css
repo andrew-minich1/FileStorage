@@ -1,0 +1,79 @@
+﻿/*Header*/
+
+.header {
+    margin-bottom: 0px;
+}
+
+
+.navbar-brand {
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+
+/*File menu*/
+.btn-file {
+  position: relative;
+  overflow: hidden;
+}
+.btn-file input[type=file] {
+  position: absolute;
+  top: 0;
+  right: 0;
+  min-width: 100%;
+  min-height: 100%;
+  font-size: 100px;
+  text-align: right;
+  filter: alpha(opacity=0);
+  opacity: 0;
+  background: red;
+  cursor: inherit;
+  display: block;
+}
+input[readonly] {
+  background-color: white !important;
+  cursor: text !important;
+}
+
+/*#uploadFile{
+    display:none;
+}*/
+
+/*Table*/
+th {
+    color: #FAF9F9;
+    background: #B0B0B0;
+    border-right: 1px solid #343a45;
+}
+
+.col-md-9 {
+    
+}
+
+
+/*Tabs*/
+
+#left-menu{
+    padding: 0px;
+}
+
+#my-tab-content {
+    padding: 40px 15px 15px 15px;
+}
+
+
+
+/*Register*/
+
+.panel {
+    border: 1px solid #CDC6C6;
+    margin-top: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .2);
+}
+
+.panel-heading {
+    background: #ECE9E9;
+}
+
+/*Footer*/
+

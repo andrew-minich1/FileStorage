@@ -1,0 +1,4 @@
+D:\Projects\FileStorage\Helpers\bin\Debug\Helpers.dll
+D:\Projects\FileStorage\Helpers\bin\Debug\Helpers.pdb
+D:\Projects\FileStorage\Helpers\obj\Debug\Helpers.dll
+D:\Projects\FileStorage\Helpers\obj\Debug\Helpers.pdb

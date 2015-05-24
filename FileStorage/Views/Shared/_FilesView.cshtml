@@ -1,0 +1,84 @@
+﻿@model FileStorage.Models.FilesViewModel
+
+
+<table class="table  table-hover table-condensed table-bordered">
+    <thead>
+        <tr>
+            <th>
+                @*@Html.ActionLink("Name", "Index", new { sortOrder = ViewBag.NameSortParm, @id = "lnkProductID" })*@
+                @Ajax.ActionLink("Name", "Sort", "Home", new { sortOrder = ViewBag.NameSortParm }, new AjaxOptions
+                {
+                    HttpMethod = "GET",
+                    InsertionMode = InsertionMode.Replace,
+                    UpdateTargetId = "main"
+                }, new { @name = "sortOrder" })
+            </th>
+            <th>Open file</th>
+            <th>
+                @*@Html.ActionLink("Created", "Index", new { sortOrder = ViewBag.DateSortParm })*@
+                @Ajax.ActionLink("Created", "Sort", "Home", new { sortOrder = ViewBag.DateSortParm }, new AjaxOptions
+                {
+                    HttpMethod = "GET",
+                    InsertionMode = InsertionMode.Replace,
+                    UpdateTargetId = "main"
+                }, new { @name = "sortOrder" })
+            </th>
+            <th>Type</th>
+            <th>Size</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var file in Model.Files)
+        {
+            <tr data-fileid=@file.Id>
+                <form method="post" class="fileForm" data-fileid=@file.Id>
+                    @Html.Hidden("Id", (int)file.Id)
+                    <td id=@file.Id data-fileid=@file.Id>@file.Name</td>
+                    <td>@Html.CheckBox("IsOpen", (bool)file.IsOpen, new { @name = "IsOpen", @class = file.Id })</td>
+                    <td>@file.DateCreated</td>
+                    <td>@file.Type</td>
+                    <td>@file.Size</td>
+                    <td>
+                        @if (ViewBag.FileAction == true)
+                        {
+                            <div class="btn btn-primary editButton" title="Edit" data-fileid=@file.Id data-toggle="modal" data-target="#rename" name="Edit">
+                                <span class=" glyphicon glyphicon-pencil">
+                                </span>
+                            </div>
+                        }
+                        <button type="submit" class="btn btn-success loadButton" data-fileid=@file.Id title="Download " name="Load">
+                            <span class="glyphicon glyphicon-circle-arrow-down"></span>
+                        </button>
+                        @if (ViewBag.FileAction == true)
+                        {
+                            <button class="btn btn-danger deleteButton" data-fileid=@file.Id title="Delete" name="DeleteFile">
+                                <span class="glyphicon glyphicon-trash"></span>
+                            </button>
+                        }
+                    </td>
+                </form>
+            </tr>
+        }
+
+    </tbody>
+</table>
+
+<div class="modal fade" id="rename">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">Edit file</h4>
+            </div>
+            <div class="form-group col-md-offset-1 col-md-10">
+                <label for="renameInput">FileName</label>
+                <input type="text" class="form-control" id="renameInput">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" id="saveNewName" class="btn btn-primary" data-fileid="" >Save</button>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,20 @@
+﻿
+    <table class="table table-bordered table-hover table-condensed">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var user in ViewBag.Users)
+            {
+                <tr>
+                    <td>@Html.ActionLink((string)user.Login, "ShowUserFiles", "Home", new { id = user.Id}, null)</td>
+                    <td>@user.Email</td>
+                    <td>@user.CreationDate</td>
+                </tr>
+            }
+        </tbody>
+    </table>

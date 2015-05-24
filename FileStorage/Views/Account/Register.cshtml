@@ -1,0 +1,59 @@
+﻿@model FileStorage.Models.AccountViewModel.RegisterViewModel
+@{
+    ViewBag.Title = "Register";
+}
+
+<!--  FORM-->
+<div class=" col-md-9 ">
+    <div class="panel">
+        <div class="panel-heading text-center ">
+            Registration
+        </div>
+        <div class="panel-body">
+            @using (Html.BeginForm("Register", "Account", FormMethod.Post, new Dictionary<string, object> { { "data-toggle", "validator" } }))
+            {
+                @Html.AntiForgeryToken()
+                @Html.ValidationSummary(true)
+
+                <fieldset>
+                    <div class="form-group">
+                        @Html.LabelFor(m => m.UserName)
+                        @Html.TextBoxFor(m => m.UserName, new { @class = "form-control", @placeholder = "Enter login" })
+                        @Html.ValidationMessageFor(m=>m.UserName)
+                    </div>
+                    <div class="form-group">
+                        @Html.LabelFor(m => m.UserEmail)
+                        @Html.TextBoxFor(m => m.UserEmail, new { @class = "form-control", @placeholder = "Enter Email" })
+                        @Html.ValidationMessageFor(m => m.UserEmail)
+                    </div>
+                    <div class="form-group">
+                        @Html.LabelFor(m => m.UserPassword)
+                        @Html.TextBoxFor(m => m.UserPassword, new { @class = "form-control", @placeholder = "Enter password", @type = "password" })
+                        @Html.ValidationMessageFor(m => m.UserPassword)
+                    </div>
+                    <div class="form-group">
+                        @Html.LabelFor(m => m.PasswordConfirm)
+                        @Html.TextBoxFor(m => m.PasswordConfirm, new { @class = "form-control", @placeholder = "Confirm password", @type = "password" })
+                        @Html.ValidationMessageFor(m => m.PasswordConfirm)
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <button type="submit" class="btn btn-success btn-lg btn-block">Sign Up Free</button>
+                        </div>
+                        <div class="col-md-6">
+                            <button type="reset" class="btn btn-info btn-lg btn-block">Cansel</button>
+                        </div>
+                    </div>
+                </fieldset>
+            }
+        </div>
+        <div class="panel-footer">
+        </div>
+    </div>
+</div>
+<!-- / FORM -->
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    <script src="~/Scripts/jquery.validate.bootstrap.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.bootstrap.min.js"></script>
+}

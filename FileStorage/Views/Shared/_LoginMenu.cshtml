@@ -1,0 +1,30 @@
+﻿@if (HttpContext.Current.User.Identity.IsAuthenticated)
+{
+    <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">@User.Identity.Name <span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+                <li>@Html.ActionLink("User", "Index", "User", new { @class = "user" })</li>
+                <li>@Html.ActionLink("Storage", "Index", "User", new { @class = "storage" })</li>
+                <li>
+                    @Ajax.ActionLink("Admin", "Index", "User", new AjaxOptions
+                {
+                    HttpMethod = "GET",
+                    InsertionMode = InsertionMode.Replace,
+                    UpdateTargetId = "main"
+                })
+            </li>
+            <li class="divider"></li>
+            <li>@Html.ActionLink("Box", "Index", "User", new { @class = "box" })</li>
+            <li class="divider"></li>
+            <li>@Html.ActionLink("Exit", "LogOff", "Account")</li>
+        </ul>
+    </li>
+</ul>
+}
+else
+{
+    <div class="navbar-form navbar-right">
+        <button type="button" class="btn btn-info" onclick="location.href='@Url.Action("Register", "Account")'">Register</button>
+    </div>
+}

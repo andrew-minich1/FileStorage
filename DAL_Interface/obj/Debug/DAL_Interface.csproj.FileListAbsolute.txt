@@ -1,0 +1,9 @@
+D:\Projects\FileStorage\DAL_Interface\bin\Debug\DAL_Interface.dll.config
+D:\Projects\FileStorage\DAL_Interface\bin\Debug\DAL_Interface.dll
+D:\Projects\FileStorage\DAL_Interface\bin\Debug\DAL_Interface.pdb
+D:\Projects\FileStorage\DAL_Interface\bin\Debug\EntityFramework.dll
+D:\Projects\FileStorage\DAL_Interface\bin\Debug\EntityFramework.SqlServer.dll
+D:\Projects\FileStorage\DAL_Interface\bin\Debug\EntityFramework.xml
+D:\Projects\FileStorage\DAL_Interface\bin\Debug\EntityFramework.SqlServer.xml
+D:\Projects\FileStorage\DAL_Interface\obj\Debug\DAL_Interface.dll
+D:\Projects\FileStorage\DAL_Interface\obj\Debug\DAL_Interface.pdb

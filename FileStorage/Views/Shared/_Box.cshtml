@@ -1,0 +1,38 @@
+﻿@model FileStorage.Models.FilesViewModel
+
+<div class="well">
+    <strong>Total Files</strong> = @Model.CountDeleteFiles
+</div>
+
+<table class="table  table-hover table-condensed table-bordered">
+    <thead>
+        <tr>
+            <th>
+                Name
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var file in Model.DeleteFiles)
+        {
+            <tr data-fileid=@file.Id>
+                @using (Html.BeginForm(FormMethod.Post))
+                {
+                    <td>@file.Name</td>
+                    <td>
+                        <div class="action">
+                            <button type="submit" class="btn btn-success btn-xs restoreButton" title="Restore " data-fileid=@file.Id name="Restore">
+                                <span class="glyphicon glyphicon-ok-sign"></span>
+                            </button>
+                            <button type="submit" class="btn btn-danger btn-xs delButton" title="Delete" data-fileid=@file.Id name="Delete">
+                                <span class="glyphicon glyphicon-remove-sign"></span>
+                            </button>
+                        </div>
+                    </td>
+                }
+            </tr>
+        }
+    </tbody>
+
+</table>

@@ -1,0 +1,11 @@
+D:\Projects\FileStorage\BLL\bin\Debug\BLL.dll
+D:\Projects\FileStorage\BLL\bin\Debug\BLL.pdb
+D:\Projects\FileStorage\BLL\bin\Debug\BLL_Interface.dll
+D:\Projects\FileStorage\BLL\bin\Debug\DAL_Interface.dll
+D:\Projects\FileStorage\BLL\bin\Debug\Helpers.dll
+D:\Projects\FileStorage\BLL\bin\Debug\BLL_Interface.pdb
+D:\Projects\FileStorage\BLL\bin\Debug\DAL_Interface.pdb
+D:\Projects\FileStorage\BLL\bin\Debug\Helpers.pdb
+D:\Projects\FileStorage\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
+D:\Projects\FileStorage\BLL\obj\Debug\BLL.dll
+D:\Projects\FileStorage\BLL\obj\Debug\BLL.pdb
